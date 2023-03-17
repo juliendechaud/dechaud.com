@@ -1,7 +1,10 @@
-html, body {
+@import url(https://fonts.bunny.net/css?family=amiko:400);
+
+html,
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Amiko', sans-serif;
     background-color: black;
     scroll-behavior: smooth;
 }
@@ -10,15 +13,16 @@ html, body {
     .grid {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 100vh 100vh 100vh 100vh;
+        grid-template-rows: 100vh 100vh 100vh;
         grid-column-gap: 20px;
     }
 }
+
 @media (max-width: 800px) {
     .grid {
         display: grid;
         grid-template-columns: 0fr 3fr 0fr;
-        grid-template-rows: 100vh 100vh 100vh 100vh;
+        grid-template-rows: 100vh 100vh 100vh;
         grid-column-gap: 20px;
     }
 }
@@ -27,6 +31,7 @@ html, body {
     grid-column-start: 2;
     grid-row-start: 1;
 }
+
 .child-1-back {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -41,6 +46,7 @@ html, body {
     grid-column-start: 2;
     grid-row-start: 2;
 }
+
 .child-2-back {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -55,6 +61,7 @@ html, body {
     grid-column-start: 2;
     grid-row-start: 3;
 }
+
 .child-3-back {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -65,21 +72,9 @@ html, body {
     background-size: cover;
 }
 
-.child-4 {
-    grid-column-start: 2;
-    grid-row-start: 4;
-}
-.child-4-back {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    background-image: url("../pic/miika-laaksonen.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.child-1, .child-2, .child-3, .child-4 {
+.child-1,
+.child-2,
+.child-3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,15 +92,18 @@ html, body {
     transition-property: border-radius, box-shadow, background-color;
     transition-duration: 0.5s, 1s, 0.25s;
 }
+
 .article:hover {
     box-shadow: 0px 6px 43px -10px white;
     background-color: rgba(93, 106, 132, 0.9);
 }
+
 .article a {
     color: white;
     text-shadow: white 1px 0 10px;
     text-decoration: none;
 }
+
 .article a:hover {
     text-decoration: underline;
 }
@@ -146,32 +144,20 @@ html, body {
     text-decoration: underline;
 }
 
-.child-4 .article {
+.child-3 .article {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.child-4 .element {
+.child-3 .element {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
-.child-4 .element img {
-    height: 150px;
-    transition-property: transform, box-shadow;
-    transition-duration: 0.25s, 0.25s;
-}
-.child-4 .element img, .child-4 .element iframe {
-    margin: 5px;
-    border: solid 2px white;
-}
-.child-4 .element img:hover {
-    transform: scale(1.25);
-    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
-}
 
-.child-4 .footer {
+.child-3 .footer {
+    padding-top: 10px;
     background-color: rgba(93, 106, 132, 0.7);
     border: solid 2px white;
     width: 100%;
@@ -180,12 +166,13 @@ html, body {
     justify-content: space-around;
 }
 
-.child-4 .footer a, span {
+.child-3 .footer a,
+span {
     color: white;
     text-decoration: none;
 }
 
-.child-4 .footer img {
+.child-3 .footer img {
     width: 25px;
 }
 
@@ -198,6 +185,7 @@ html, body {
     transition-property: opacity, bottom;
     transition-duration: 0.8s, 0.8s;
 }
+
 .up a:hover {
     bottom: 9%;
     opacity: 1;
